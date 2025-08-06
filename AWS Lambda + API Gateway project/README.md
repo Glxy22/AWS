@@ -35,7 +35,7 @@ curl -X POST https://your-api-url/dev/user \
         "class": "5th"
       }'
 
-**Response:**
+### Response
 {
   "message": "User added successfully"
 }
@@ -48,3 +48,14 @@ curl -X POST https://your-api-url/dev/user \
   },
   ...
 ]
+
+🧪 Deployment & Testing
+Deployed via API Gateway (stage: dev)
+
+Lambda permissions managed by IAM role
+
+API is tested using curl and browser for GET requests
+curl https://f1tyiyl6k0.execute-api.us-east-1.amazonaws.com/dev/users
+[{"email": "sara@example.com", "name": "saraa", "class": "5th"}, {"email": "nadia@example.com", "name": "Nadia", "class": "5th"}]
+
+TODO: add Delete and update API's
